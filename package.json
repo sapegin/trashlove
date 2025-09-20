@@ -1,0 +1,27 @@
+{
+  "name": "trashlove",
+  "private": true,
+  "author": {
+    "name": "Artem Sapegin",
+    "url": "https://sapegin.me"
+  },
+  "homepage": "https://github.com/sapegin/trashlove",
+  "repository": "sapegin/trashlove",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "npm run format",
+    "format": "prettier --write \"**/*.{js,mjc,cjs,ts,tsx,css,json,jsonc,md}\"",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "prettier": "^3.6.2"
+  },
+  "lint-staged": {
+    "*.{js,mjc,cjs,ts,tsx,css,json,jsonc,md}": "prettier --write"
+  }
+}
