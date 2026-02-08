@@ -28,7 +28,7 @@
 }
 
 @media (min-width: 60rem) {
-  html {
+  html.scroll-snap {
     scroll-snap-type: y mandatory;
   }
 }
@@ -165,6 +165,31 @@ a:focus {
 }
 @media (min-width: 80rem) {
   .page img {
+    max-width: calc(40rem - var(--space-xl));
+  }
+}
+
+.postcards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.postcards img {
+  width: auto;
+  height: auto;
+  max-width: calc(100vw - var(--space-xl));
+  max-height: calc(100vh - var(--space-xl));
+}
+@media (min-width: 60rem) {
+  .postcards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .postcards img {
+    max-width: calc(50vw - var(--space-xl));
+  }
+}
+@media (min-width: 80rem) {
+  .postcards img {
     max-width: calc(40rem - var(--space-xl));
   }
 }
